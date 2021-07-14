@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Container from 'components/Container/Container';
-import { Buttons } from './components/Buttons/Buttons';
+import Buttons from './components/Buttons/Buttons';
 import Statistics from './components/Statistics/Statistics';
 import Section from './components/Section/Section';
 import Notification from './components/Notification/Notification';
@@ -32,7 +32,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
     const nameButtons = Object.keys(this.state);
     const total = this.countTotalFeedback();
     return (

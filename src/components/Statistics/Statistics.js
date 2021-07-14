@@ -1,4 +1,5 @@
 import s from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 function Statistics({ stateName, func1, func2 }) {
   return (
@@ -24,5 +25,11 @@ function statistic(stateName) {
   }
   return markup;
 }
+
+Statistics.propTypes = {
+  stateName: PropTypes.objectOf(PropTypes.number).isRequired,
+  func1: PropTypes.number.isRequired,
+  func2: PropTypes.number.isRequired,
+};
 
 export default Statistics;

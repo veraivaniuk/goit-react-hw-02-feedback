@@ -1,6 +1,6 @@
 import s from './Buttons.module.css';
-
-export function Buttons({ stateName, func }) {
+import PropTypes from 'prop-types';
+function Buttons({ stateName, func }) {
   return (
     <div>
       {stateName.map(element => (
@@ -17,3 +17,10 @@ export function Buttons({ stateName, func }) {
     </div>
   );
 }
+
+Buttons.propTypes = {
+  stateName: PropTypes.arrayOf(PropTypes.string),
+  func: PropTypes.func,
+};
+
+export default Buttons;
